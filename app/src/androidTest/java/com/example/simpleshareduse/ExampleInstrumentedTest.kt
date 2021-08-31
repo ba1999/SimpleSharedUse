@@ -1,4 +1,4 @@
-package com.example.firebaseauth
+package com.example.simpleshareduse
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

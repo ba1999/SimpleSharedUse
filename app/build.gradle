@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.firebaseauth"
+        applicationId 'com.example.simpleshareduse'
         minSdkVersion 27
         targetSdkVersion 30
         versionCode 1

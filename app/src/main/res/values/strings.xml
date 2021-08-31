@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FirebaseAuth</string>
+    <string name="app_name">SimpleSharedUse</string>
 
     <string name="logged_out">Ausgeloggt</string>
     <string name="logged_in">Eingeloggt</string>

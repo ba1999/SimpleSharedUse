@@ -1,4 +1,4 @@
-package com.example.firebaseauth
+package com.example.simpleshareduse
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "472987481622",
-    "project_id": "fir-auth-dad60",
-    "storage_bucket": "fir-auth-dad60.appspot.com"
+    "project_number": "372481020643",
+    "project_id": "simpleshareduse-ff51d",
+    "storage_bucket": "simpleshareduse-ff51d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:472987481622:android:cea4de36459c5742996737",
+        "mobilesdk_app_id": "1:372481020643:android:1644e6eb42e10841f52bd6",
         "android_client_info": {
-          "package_name": "com.example.firebaseauth"
+          "package_name": "com.example.simpleshareduse"
         }
       },
       "oauth_client": [
         {
-          "client_id": "472987481622-gt83r0ukd4b3fn582aohavfv77j4ni4b.apps.googleusercontent.com",
+          "client_id": "372481020643-oand18rso5n3ulgeplqdoj7qkc0atcs1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDSOjVKeA_wFkFhHhNjTuBAFXyEXJY4Ixw"
+          "current_key": "AIzaSyCGl7FwT4j_1oRXRQYjRaCzY5LE64DJAbw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "472987481622-gt83r0ukd4b3fn582aohavfv77j4ni4b.apps.googleusercontent.com",
+              "client_id": "372481020643-oand18rso5n3ulgeplqdoj7qkc0atcs1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
