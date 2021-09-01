@@ -23,4 +23,14 @@
     <string name="send">Senden</string>
     <string name="forgotPw_title">Passwort vergessen</string>
     <string name="forgotPw_msg">Geben Sie Ihre Email ein.</string>
+
+    <string name="playButton">Play</string>
+    <string name="leaderboardButton">Leaderboard</string>
+    <string name="DisplayName">Set/Change Nickname</string>
+    <string name="pleaseLogin">Bitte Loggen Sie sich zuerst ein.</string>
+    <string name="posButton">OK</string>
+    <string name="negButton">Abbruch</string>
+    <string name="setDisplayNameTitle">Neuer Nickname:</string>
+    <string name="statusLogout">Bitte loggen Sie sich ein.</string>
+    <string name="helloMessage">Hallo %1$s!</string>
 </resources>
