@@ -33,4 +33,10 @@
     <string name="setDisplayNameTitle">Neuer Nickname:</string>
     <string name="statusLogout">Bitte loggen Sie sich ein.</string>
     <string name="helloMessage">Hallo %1$s!</string>
+    <string name="buttonWahr">wahr</string>
+    <string name="buttonFalsch">falsch</string>
+    <string name="textPunkte">Punkte: %1$d</string>
+    <string name="numQuestions">Anzahl Fragen unbekannt oder zu gering</string>
+    <string name="gameEndedDialog">Spiel beendet mit \n %1$d Punkten!</string>
+    <string name="save">Gespeichert</string>
 </resources>

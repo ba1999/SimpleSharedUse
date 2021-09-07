@@ -19,6 +19,7 @@ import androidx.annotation.DrawableRes
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
 
 import splitties.toast.toast
 
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
     private val leaderboardButton : Button by lazy { findViewById(R.id.leaderbtn) }
 
     private val mFirebaseAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
+    private val db : FirebaseFirestore by lazy { FirebaseFirestore.getInstance()  }
+
+    private var numberOfQuestions = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,13 +45,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         playButton.setOnClickListener{
-
+            if (numberOfQuestions > 4) {
+                val intent = Intent(this, SinglePlayerActivity::class.java)
+                intent.putExtra(Constants.NUM_OF_QUESTIONS, numberOfQuestions)
+                startActivity(intent)
+            }
+            else{
+                toast(getString(R.string.numQuestions))
+            }
         }
 
         leaderboardButton.setOnClickListener {
 
         }
 
+        updateUI()
+        getAmount()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -168,5 +181,24 @@ class MainActivity : AppCompatActivity() {
             setView(view)
             dialogConfig()
         }.create()
+    }
+
+    private fun getAmount() {
+        numberOfQuestions = -1
+        db.collection(Constants.LIBRARY)
+            .get()
+            .addOnCompleteListener{ task ->
+                    if (task.isSuccessful) {
+                        numberOfQuestions = task.result!!.size()
+                    } else {
+
+                        Toast.makeText(
+                            applicationContext,
+                            task.exception!!.message,
+                            Toast.LENGTH_LONG
+                        ).show()
+
+                    }
+            }
     }
 }
