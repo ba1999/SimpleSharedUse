@@ -2,14 +2,12 @@ package com.example.simpleshareduse
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.annotation.NonNull
 import com.google.android.gms.tasks.Task
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
-import com.google.firebase.firestore.QueryDocumentSnapshot
-import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.*
 import java.util.ArrayList
 
 class LeaderboardActivity : AppCompatActivity() {
@@ -27,24 +25,23 @@ class LeaderboardActivity : AppCompatActivity() {
         db.collection(Constants.LEADERBOARD)
             .orderBy(Constants.USERSCORE, Query.Direction.DESCENDING)
             .limit(Constants.HIGHSCORELIMIT.toLong())
-            .get()
-            .addOnCompleteListener { task ->
-                    if(task.isSuccessful)
-                    {
-                        updateList(task)
-                    }
-            }
+            .addSnapshotListener(EventListener { value, e ->
+                if (e != null) {
+                    return@EventListener
+                }
+                updateListOnChange(value!!)
+            })
 
 
     }
 
-    private fun updateList(task: Task<QuerySnapshot>) {
-        listScore = ArrayList<String>()
-        for (documentSnapshot in task.result!!) {
+    private fun updateListOnChange(value: QuerySnapshot) {
+        listScore = ArrayList()
+        for (documentSnapshot in value) {
             val highscore = documentSnapshot.toObject(Scores::class.java)
             listScore.add(highscore.toString())
         }
-        adapter = ArrayAdapter<String>(
+        adapter = ArrayAdapter(
             this@LeaderboardActivity,
             android.R.layout.simple_list_item_1, listScore
         )
