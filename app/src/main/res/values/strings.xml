@@ -39,4 +39,7 @@
     <string name="numQuestions">Anzahl Fragen unbekannt oder zu gering</string>
     <string name="gameEndedDialog">Spiel beendet mit \n %1$d Punkten!</string>
     <string name="save">Gespeichert</string>
+    <string name="singleLeader_Title">Highcores</string>
+    <string name="singleLeader_Info">Top Spielergebnisse aus aller Welt</string>
+
 </resources>

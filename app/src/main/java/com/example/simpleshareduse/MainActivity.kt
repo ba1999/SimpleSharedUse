@@ -56,7 +56,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         leaderboardButton.setOnClickListener {
-
+            val intent = Intent(this, LeaderboardActivity::class.java)
+            startActivity(intent)
         }
 
         updateUI()

@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseAuth">
         <activity
+            android:name=".LeaderboardActivity"
+            android:exported="true" />
+        <activity
             android:name=".SinglePlayerActivity"
-            android:exported="true"
             android:configChanges="orientation"
-            android:screenOrientation="landscape"/>
+            android:exported="true"
+            android:screenOrientation="landscape" />
         <activity android:name=".SigninActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
