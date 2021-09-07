@@ -32,7 +32,6 @@ class LeaderboardActivity : AppCompatActivity() {
                 updateListOnChange(value!!)
             })
 
-
     }
 
     private fun updateListOnChange(value: QuerySnapshot) {
